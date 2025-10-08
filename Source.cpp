@@ -55,7 +55,7 @@ int main() {
 	void (*func)(vector<int>&, vector<int>&) = mergeSort;
 	func(a, b);
 	for (auto x : a) {
-		cout << x << ' ';
+		cout << x << ' '; //test
 	}
 	return 0;
 }
