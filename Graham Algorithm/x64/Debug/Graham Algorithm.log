@@ -1,38 +1,5 @@
 ﻿  Source.cpp
-D:\Programming\cPP!\Graham Algorithm\Source.cpp(39,25): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-D:\Programming\cPP!\Graham Algorithm\Source.cpp(40,28): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-D:\Programming\cPP!\Graham Algorithm\dheap.h(65,29): warning C4244: 'argument': conversion from 'double' to 'const unsigned __int64', possible loss of data
-  (compiling source file 'Source.cpp')
-      D:\Programming\cPP!\Graham Algorithm\dheap.h(65,29):
-      the template instantiation context (the oldest one first) is
-          D:\Programming\cPP!\Graham Algorithm\Source.cpp(44,13):
-          see reference to class template instantiation 'dheap<int>' being compiled
-          D:\Programming\cPP!\Graham Algorithm\dheap.h(63,10):
-          while compiling class template member function 'void dheap<int>::insert(T)'
-          with
-          [
-              T=int
-          ]
-              D:\Programming\cPP!\Graham Algorithm\Source.cpp(46,14):
-              see the first reference to 'dheap<int>::insert' in 'main'
-  
-D:\Programming\cPP!\Graham Algorithm\dheap.h(68,16): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Source.cpp')
-  
-D:\Programming\cPP!\Graham Algorithm\dheap.h(44,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Source.cpp')
-      D:\Programming\cPP!\Graham Algorithm\dheap.h(44,15):
-      the template instantiation context (the oldest one first) is
-          D:\Programming\cPP!\Graham Algorithm\dheap.h(43,10):
-          while compiling class template member function 'void dheap<int>::ascend(int)'
-              D:\Programming\cPP!\Graham Algorithm\dheap.h(68,15):
-              see the first reference to 'dheap<int>::ascend' in 'dheap<int>::insert'
-              D:\Programming\cPP!\Graham Algorithm\Source.cpp(46,14):
-              see the first reference to 'dheap<int>::insert' in 'main'
-  
-D:\Programming\cPP!\Graham Algorithm\dheap.h(48,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Source.cpp')
-  
+D:\Programming\cPP!\Graham Algorithm\Source.cpp(126,28): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   Graham Algorithm.vcxproj -> D:\Programming\cPP!\Graham Algorithm\x64\Debug\Graham Algorithm.exe
   "pwsh.exe" не является внутренней или внешней
   командой, исполняемой программой или пакетным файлом.
