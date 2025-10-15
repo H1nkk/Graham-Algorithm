@@ -1,0 +1,73 @@
+﻿  Source.cpp
+D:\Programming\cPP!\Graham Algorithm\point.h(47,19): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'Source.cpp')
+  
+D:\Programming\cPP!\Graham Algorithm\Source.cpp(225,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Programming\cPP!\Graham Algorithm\mergeSort.h(126,28): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Source.cpp')
+      D:\Programming\cPP!\Graham Algorithm\mergeSort.h(126,28):
+      the template instantiation context (the oldest one first) is
+          D:\Programming\cPP!\Graham Algorithm\Source.cpp(97,14):
+          see reference to function template instantiation 'void mergeSort<Point>(std::vector<Point,std::allocator<Point>> &)' being compiled
+  
+D:\Programming\cPP!\Graham Algorithm\dheap.h(116,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Source.cpp')
+      D:\Programming\cPP!\Graham Algorithm\dheap.h(116,20):
+      the template instantiation context (the oldest one first) is
+          D:\Programming\cPP!\Graham Algorithm\Source.cpp(15,15):
+          see reference to class template instantiation 'dheap<Point>' being compiled
+          D:\Programming\cPP!\Graham Algorithm\dheap.h(115,10):
+          while compiling class template member function 'void dheap<Point>::pyramidSort(std::vector<Point,std::allocator<Point>> &)'
+              D:\Programming\cPP!\Graham Algorithm\Source.cpp(16,18):
+              see the first reference to 'dheap<Point>::pyramidSort' in 'pyramidSort'
+  
+D:\Programming\cPP!\Graham Algorithm\dheap.h(110,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Source.cpp')
+      D:\Programming\cPP!\Graham Algorithm\dheap.h(110,20):
+      the template instantiation context (the oldest one first) is
+          D:\Programming\cPP!\Graham Algorithm\dheap.h(108,10):
+          while compiling class template member function 'void dheap<Point>::makeHeap(const std::vector<Point,std::allocator<Point>> &)'
+              D:\Programming\cPP!\Graham Algorithm\dheap.h(117,17):
+              see the first reference to 'dheap<Point>::makeHeap' in 'dheap<Point>::pyramidSort'
+              D:\Programming\cPP!\Graham Algorithm\Source.cpp(16,18):
+              see the first reference to 'dheap<Point>::pyramidSort' in 'pyramidSort'
+  
+D:\Programming\cPP!\Graham Algorithm\dheap.h(17,21): warning C4267: '*=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Source.cpp')
+      D:\Programming\cPP!\Graham Algorithm\dheap.h(17,21):
+      the template instantiation context (the oldest one first) is
+          D:\Programming\cPP!\Graham Algorithm\dheap.h(13,10):
+          while compiling class template member function 'void dheap<Point>::arrCopy(const std::vector<Point,std::allocator<Point>> &)'
+              D:\Programming\cPP!\Graham Algorithm\dheap.h(109,16):
+              see the first reference to 'dheap<Point>::arrCopy' in 'dheap<Point>::makeHeap'
+              D:\Programming\cPP!\Graham Algorithm\dheap.h(117,17):
+              see the first reference to 'dheap<Point>::makeHeap' in 'dheap<Point>::pyramidSort'
+              D:\Programming\cPP!\Graham Algorithm\Source.cpp(16,18):
+              see the first reference to 'dheap<Point>::pyramidSort' in 'pyramidSort'
+  
+D:\Programming\cPP!\Graham Algorithm\dheap.h(33,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Source.cpp')
+      D:\Programming\cPP!\Graham Algorithm\dheap.h(33,17):
+      the template instantiation context (the oldest one first) is
+          D:\Programming\cPP!\Graham Algorithm\dheap.h(32,9):
+          while compiling class template member function 'int dheap<Point>::maxChildIndex(int)'
+              D:\Programming\cPP!\Graham Algorithm\dheap.h(53,15):
+              see the first reference to 'dheap<Point>::maxChildIndex' in 'dheap<Point>::descend'
+              D:\Programming\cPP!\Graham Algorithm\dheap.h(111,20):
+              see the first reference to 'dheap<Point>::descend' in 'dheap<Point>::makeHeap'
+              D:\Programming\cPP!\Graham Algorithm\dheap.h(117,17):
+              see the first reference to 'dheap<Point>::makeHeap' in 'dheap<Point>::pyramidSort'
+              D:\Programming\cPP!\Graham Algorithm\Source.cpp(16,18):
+              see the first reference to 'dheap<Point>::pyramidSort' in 'pyramidSort'
+  
+D:\Programming\cPP!\Graham Algorithm\dheap.h(38,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Source.cpp')
+  
+  Generating code
+  66 of 311 functions (21.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    11 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Graham Algorithm.vcxproj -> D:\Programming\cPP!\Graham Algorithm\x64\Release\Graham Algorithm.exe
+  "pwsh.exe" не является внутренней или внешней
+  командой, исполняемой программой или пакетным файлом.
