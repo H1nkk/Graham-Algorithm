@@ -1,4 +1,5 @@
 #include <iostream>
+#include <random>
 #include "dheap.h"
 #include "point.h"
 #include "mergeSort.h"
@@ -44,27 +45,39 @@ int convSort(vector<Point>& a, void (*sortFunc)(vector<Point>& a)) { // returns 
 	return m;
 }
 
-void doExperiments() {
+void doExperiments(const vector<Point>& a) {
 
 }
 
+void inputExperiments() {
+	int n;
+	cout << "Input point count: ";
+	cin >> n;
+
+	int q, w;
+	cout << "Input grid length: ";
+	cin >> q;
+	cout << "Input grid width: ";
+	cin >> w;
+
+	int mode;
+	cout << "Choose point placement mode.\n1 - in a rectangle with length of q and width of w\n2 - on this rectangle sides\nInput: ";
+	cin >> mode;
+
+	vector<Point> a(n);
+	if (mode == 1) {
+		/*
+		заполнение массива
+		*/
+
+		doExperiments(a);
+	}
+	else if (mode == 2) {
+
+	}
+}
+
 int main() {
-	vector<Point> a{ {0,0}, {54, 0}, {0, 543}, {2, 4}, {1, 3}, {5, -5} };
-
-	void (*func)(vector<Point>&a) = mergeSort;
-
-	for (auto x : a) {
-		cout << x.x << ' ' << x.y;
-		cout << '\n';
-	}
-
-	cout << "Conv hull:\n";
-
-	int n = convSort(a, pyramidSort);
-
-	for (int i = 0; i < n; i++) {
-		cout << a[i] << '\n';
-	}
-
+	inputExperiments();
 	return 0;
 }

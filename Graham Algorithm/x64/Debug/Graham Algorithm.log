@@ -2,13 +2,6 @@
 D:\Programming\cPP!\Graham Algorithm\point.h(47,19): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
   (compiling source file 'Source.cpp')
   
-D:\Programming\cPP!\Graham Algorithm\mergeSort.h(126,28): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Source.cpp')
-      D:\Programming\cPP!\Graham Algorithm\mergeSort.h(126,28):
-      the template instantiation context (the oldest one first) is
-          D:\Programming\cPP!\Graham Algorithm\Source.cpp(51,32):
-          see reference to function template instantiation 'void mergeSort<Point>(std::vector<Point,std::allocator<Point>> &)' being compiled
-  
 D:\Programming\cPP!\Graham Algorithm\dheap.h(116,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'Source.cpp')
       D:\Programming\cPP!\Graham Algorithm\dheap.h(116,20):
