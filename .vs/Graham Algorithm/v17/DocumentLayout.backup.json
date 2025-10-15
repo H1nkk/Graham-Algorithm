@@ -49,8 +49,7 @@
               "RelativeToolTip": "..\\..\\..\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\include\\vector",
               "ViewState": "AgIAAHYHAAAAAAAAAAD4v4kHAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-15T11:36:37.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T11:36:37.147Z"
             },
             {
               "$type": "Document",
@@ -60,7 +59,7 @@
               "RelativeDocumentMoniker": "point.h",
               "ToolTip": "D:\\Programming\\cPP!\\Graham Algorithm\\point.h",
               "RelativeToolTip": "point.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-10-15T11:33:20.759Z",
               "EditorCaption": ""
@@ -73,7 +72,7 @@
               "RelativeDocumentMoniker": "mergeSort.h",
               "ToolTip": "D:\\Programming\\cPP!\\Graham Algorithm\\mergeSort.h",
               "RelativeToolTip": "mergeSort.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-10-15T11:32:44.293Z",
               "EditorCaption": ""
@@ -99,7 +98,7 @@
               "RelativeDocumentMoniker": "Source.cpp",
               "ToolTip": "D:\\Programming\\cPP!\\Graham Algorithm\\Source.cpp*",
               "RelativeToolTip": "Source.cpp*",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAcwLwAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-10-05T19:11:08.406Z",
               "EditorCaption": ""
