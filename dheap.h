@@ -30,9 +30,10 @@ class dheap {
         return -1;
     }
     int maxChildIndex(int x) {
-        int res = -1, max = INT_MIN;
+        int res = d * x + 1;
+        T max = mem[min(d * x + 1, size - 1)];
         for (int i = 1; i <= d; i++) {
-            int child = mem[min(d * x + i, size - 1)];
+            T child = mem[min(d * x + i, size - 1)];
             if (child > max) {
                 res = d * x + i;
                 max = child;
@@ -84,7 +85,8 @@ public:
     void eraseMax() {
         swap(mem[0], mem[size - 1]);
         size--;
-        descend(0);
+        if (size != 0)
+            descend(0);
     }
 
     void print() {
@@ -111,10 +113,12 @@ public:
     }
 
     void pyramidSort(vector<T>& arr) {
+        int tempsz = arr.size();
         makeHeap(arr);
         for (int i = 0; i < arr.size(); i++) {
             eraseMax();
         }
+        mem.resize(tempsz);
         arr = mem;
     }
 

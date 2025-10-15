@@ -1,20 +1,11 @@
 #include <iostream>
 #include "dheap.h"
+#include "point.h"
 
 #define STEPS 5
 
 using namespace std;
 
-struct Point {
-	int x;
-	int y;
-
-};
-
-bool operator<=(Point a, Point b) {
-	int det = a.x * b.y - b.x * a.y;
-	return (det > 0 || ((det == 0) && ((a.x * a.x + a.y * a.y) < (b.x * b.x + b.y * b.y))));
-}
 
 //struct Node {
 //	Node* left;
@@ -78,18 +69,19 @@ bool operator<=(Point a, Point b) {
 //		return start->value;
 //	}
 //};
+template<typename T>
+T getMin(vector<T>& b, vector<int>& splits, int start, int end) {
 
-void arrCopy(vector<int>& src, vector<int>& dist, int start, int end) {
-	for (int i = start; i < end; i++) {
-		dist[i] = src[i];
-	}
-}
-
-int getMin(vector<int>& b, vector<int>& splits, int start, int end) {
-
-	int minimum = INT_MAX, splitsMinIndex = -1;
+	bool first = true;
+	T minimum;
+	int splitsMinIndex = -1;
 	for (int i = 0; i < STEPS + 1; i++) {
-		if (splits[i] >= start + (i + 1) * (end - start) / STEPS || splits[i] >= end) continue;
+		if ((splits[i] >= (start + (i + 1) * (end - start) / STEPS)) || (splits[i] >= end)) continue;
+		if (first) {
+			minimum = b[splits[i]];
+			first = false;
+			splitsMinIndex = i;
+		}
 		if (b[splits[i]] < minimum) {
 			minimum = b[splits[i]];
 			//minIndex = splits[i];
@@ -101,7 +93,8 @@ int getMin(vector<int>& b, vector<int>& splits, int start, int end) {
 	return minimum;
 }
 
-void merge(vector<int>& a, vector<int>& b, int start, int end) {
+template<typename T>
+void merge(vector<T>& a, vector<T>& b, int start, int end) {
 	vector<int> splits(STEPS + 1);
 	splits[0] = start;
 	for (int i = 1; i < STEPS; i++) {
@@ -115,7 +108,8 @@ void merge(vector<int>& a, vector<int>& b, int start, int end) {
 
 }
 
-void splitMerge(vector<int>& a, vector<int>& b, int start, int end) {
+template<typename T>
+void splitMerge(vector<T>& a, vector<T>& b, int start, int end) {
 	if (end - start <= 1) return;
 	vector<int> splits(STEPS + 1);
 	splits[0] = start;
@@ -130,24 +124,98 @@ void splitMerge(vector<int>& a, vector<int>& b, int start, int end) {
 	merge(a, b, start, end);
 }
 
-void mergeSort(vector<int>& a) {
-	vector<int> b = a;
-	//arrCopy(a, b, 0, a.size());
+template<typename T>
+void mergeSort(vector<T>& a) {
+	vector<T> b = a;
 	splitMerge(a, b, 0, a.size());
 }
 
-void pyramidSort(vector<int>& a) {
-	dheap<int> heap(3);
+void pyramidSort(vector<Point>& a) {
+	dheap<Point> heap(3);
+	heap.pyramidSort(a);
+}
+
+int det(Point a, Point b) {
+	return a.x * b.y - a.y * b.x;
+}
+
+int convSort(vector<Point>& a, void (*sortFunc)(vector<Point>& a)) { // returns size of convex hull
+	Point c = a[0];
+	int m = 0;
+	
+	for (int i = 1; i < a.size(); i++) {
+		if ((a[i].x < c.x) || ((a[i].x == c.x) && (a[i].y < c.y))) {
+			c = a[i];
+			m = i;
+		}
+	}
+	swap(a[0], a[m]);
+	m = 0;
+	for (int i = 0; i < a.size(); i++) {
+		a[i] = a[i] - c;
+	}
+	sortFunc(a);
+	for (int i = 1; i < a.size(); i++) {
+		if (a[i] != a[m]) {
+			if (m >= 1)
+				while ((m >= 1) && det(a[m] - a[m - 1], a[i] - a[m]) <= 0) // тут изменил a[i] - a[m] >= 0 на a[i] - a[m]) <= 0, т.к. в методичке ошибка
+					--m;
+
+			++m;
+			swap(a[m], a[i]);
+		}
+
+	}
+	++m;
+	for (int i = 0; i < m; i++) {
+		a[i] = a[i] + c;
+	}
+	return m;
 }
 
 int main() {
-	vector<int> a = { 1,7,5,3,9,2,-8,4, 2 };
-	for (int i = 0; i < 50; i++) {
-		a.push_back((i * 123123 + 54) % 1432);
+	vector<Point> a{ {0,0}, {54, 0}, {0, 543}, {2, 4}, {1, 3}, {5, -5} };
+	//for (int i = 0; i < 50; i++) {
+	//	a.push_back({ (double)(i * 543 % 42), (double)((i * 4234 + 543) % 531) });
+	//}
+	vector<int> v;
+	for (int i = 0; i < 1024; i++) {
+		v.push_back((1024 - i) * 2);
 	}
-	mergeSort(a);
+	for (int i = 0; i < 1024; i++) {
+		v.push_back((i) * 2);
+	}
+	for (int i = 0; i < 1024; i++) {
+		v.push_back((i) * 2543);
+	}
+	mergeSort(v);
+	for (int i = 0; i < v.size() - 1; i++) {
+		if (v[i] > v[i + 1]) {
+			cout << "nisdofsduighfjshdfgJHsdF";
+		}
+	}
+	cout << '\n';
+	void (*func)(vector<Point>&a) = mergeSort;
+	//vector<Point> b = a;
+	//sort(b.begin(), b.end());
+	//pyramidSort(a);
+	//for (auto x : a) {
+	//	cout << x.x << ' ' << x.y << '\n';
+	//}
+	//cout << "-------\n";
+	//for (auto x : b) {
+	//	cout << x.x << ' ' << x.y << '\n';
+	//}
+	func(a);
 	for (auto x : a) {
-		cout << x << ' ';
+		cout << x.x << ' ' << x.y;
+		cout << '\n';
 	}
+	cout << "Conv hull:\n";
+	int n = convSort(a, pyramidSort);
+	for (int i = 0; i < n; i++) {
+		cout << a[i] << '\n';
+	}
+
 	return 0;
 }
