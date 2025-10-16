@@ -131,7 +131,7 @@ void doTask31() {
 
 		int mode = 1;
 		double mergeTimeSum = 0.0, pyramidTimeSum = 0.0;
-		int experimentCount = EXPCOUNT;
+		int experimentCount = 10 + EXPCOUNT / (n / 10000 + 1);
 		for (int i = 0; i < experimentCount; i++) {
 			vector<Point> a = generatePoints(n, q, w, mode);
 			pair<double, double> res = doExperiments(a);
@@ -155,7 +155,7 @@ void doTask31() {
 		pyramidTime = pyramidTimeSum / experimentCount;
 		outMergeMode2 << n << ' ' << mergeTime << '\n';
 		outPyramidMode2 << n << ' ' << pyramidTime << '\n';
-		cout << "Task 3.1: n = " << n << " done\n";
+		cout << "Task 3.1: n = " << n << " done\n"; cout << flush;
 	}
 }
 
@@ -180,7 +180,7 @@ void doTask32() {
 		w = q;
 		int mode = 1;
 		double mergeTimeSum = 0.0, pyramidTimeSum = 0.0;
-		int experimentCount = EXPCOUNT;
+		int experimentCount = 10 + EXPCOUNT / (q / 10000 + 1);
 		for (int i = 0; i < experimentCount; i++) {
 			vector<Point> a = generatePoints(n, q, w, mode);
 			pair<double, double> res = doExperiments(a);
@@ -204,7 +204,7 @@ void doTask32() {
 		pyramidTime = pyramidTimeSum / experimentCount;
 		outMergeMode2 << q << ' ' << mergeTime << '\n';
 		outPyramidMode2 << q << ' ' << pyramidTime << '\n';
-		cout << "Task 3.2: q = " << q << " done\n";
+		cout << "Task 3.2: q = " << q << " done\n"; cout << flush;
 	}
 }
 
