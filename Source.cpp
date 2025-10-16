@@ -180,8 +180,7 @@ void doTask32() {
 		w = q;
 		int mode = 1;
 		double mergeTimeSum = 0.0, pyramidTimeSum = 0.0;
-		//int experimentCount = 10 + EXPCOUNT / (q / 10000 + 1);
-		int experimentCount = 1;
+		int experimentCount = 10;
 		for (int i = 0; i < experimentCount; i++) {
 			vector<Point> a = generatePoints(n, q, w, mode);
 			pair<double, double> res = doExperiments(a);
@@ -250,7 +249,7 @@ void inputExperiments() {
 int main() {
 	srand(time(0));
 	//inputExperiments();
-	//doTask31();
+	doTask31();
 	doTask32();
 
 	return 0;
